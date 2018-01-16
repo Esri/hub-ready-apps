@@ -9,7 +9,7 @@
   - [X] [Identity](#identity)
     - [X] [Global Profile](#global-profile)*
   - [X] [Shared Theme](#shared-theme)
-  - [X] [Durabe State](#durable-state)
+  - [X] [Durable State](#durable-state)
   - [X] [Accessibility](#accessibility)
   - [X] [Indicator Aware](#indicator-aware)
   - [X] [Telemetry](#telemetry)
