@@ -4,35 +4,57 @@
 
 ## Table of Contents
 
-- [What _is_ a **Hub Ready** App?](#what-is-a-hub-ready-app)
+- [What _is_ a **Hub**?](#what-is-a-hub)
+- [What _is_ a **Hub Ready App**?](#what-is-a-hub-ready-app)
   - [X] [Live Content](#live-content)
+  - [X] [Indicator Aware](#indicator-aware)
   - [X] [Identity](#identity)
-    - [X] [Global Profile](#global-profile)*
   - [X] [Shared Theme](#shared-theme)
+  - [X] [Data Citation](#data-citation)
+- Best Practices
   - [X] [Durable State](#durable-state)
   - [X] [Accessibility](#accessibility)
-  - [X] [Indicator Aware](#indicator-aware)
+  - [X] [Responsive](#responsive)
   - [X] [Telemetry](#telemetry)
-  - [X] [Data Citation](#data-citation)
+  - [X] [I18n](#i18n)
   - [X] [Discussions](#disussions)
   - [X] [Versioning](#versioning)
-  - [X] [Connected Apps](#connected-apps)*
-  - [X] [App Switcher](#app-switcher)*
-- [Contributing](#contributing)
-- [Code of Conduct](CODE_OF_CONDUCT.md)
-- [License](#license)
+  - [X] [License](#license)
+- Aspirational
+  - [ ] [Connected Apps](#connected-apps)*
+  - [ ] [App Switcher](#app-switcher)*
+  - [ ] [Global Profile](#global-profile)*
+- [Tools](#tools)
+
+## What _is_ a **Hub**?
+
+[ArcGIS Hub](http://hub.arcgis.com/) provides a two-way engagement platform to connect government and citizens.
+
+[![video introducing hub](https://www.gislounge.com/wp-content/uploads/2017/06/arcgis-hub.png)](https://esri.app.box.com/s/edd8di8sy5r8wxyrcnl2v4mh3n5bwjpj)
+
+> An interactive platform to organize people, processes, and technology. ArcGIS Hub comes with built-in event creation and allows you to gather feedback from inside and outside your organization to find or create new solutions to existing problems.
 
 ## What _is_ a **Hub Ready** App?
 
 Hub-Ready Apps integrate with the Hub administrative and community user experience and provide simple workflows to inform, listen and monitor important initiatives.
 
-Hub-Ready Apps extend the ArcGIS configurable app pattern to make it easier to share and re-use solutions that integrate directly with the Hub architecture and organization system and branding.
+Hub-Ready Apps extend the ArcGIS configurable app pattern to share and re-use solutions that integrate directly with the Hub architecture and organization datasets and branding.
+
+**Note: Your own app doesn't need to implement _each and every_ pattern described in our checklist to be considered *Hub Ready*.**
 
 ## Live Content
 
+<!--
+~~static data~~
+1. hardcoded web service
+2. configurable app
+3. with or w/o webmap
+4. indicator aware app 🙏
+-->
+
 using Item config and Group Permissions (with Configurable ArcGIS Content)
 
-Apps should be centrally managed, but then reusable through dynamic configurations that are loaded at runtime. This supports many organizations each maintaining configured versions of the app without requiring rehosting the app. This minimizes development, deployment, and operational overhead. [Read more about Configurable apps](http://doc.arcgis.com/en/arcgis-online/create-maps/create-app-templates.htm) and [configurable app specification](http://doc.arcgis.com/en/arcgis-online/create-maps/configurable-templates.htm)
+Apps should be centrally managed, but then reusable through dynamic configurations that are loaded at runtime. This supports many organizations each maintaining [configured](http://doc.arcgis.com/en/arcgis-online/create-maps/create-app-templates.htm) versions of the app using a single deployment. This minimizes development, deployment, and operational overhead. Read more about the [configurable app specification](http://doc.arcgis.com/en/arcgis-online/create-maps/configurable-templates.htm)
 
 A [Configurable App Template](http://doc.arcgis.com/en/arcgis-online/create-maps/create-app-templates.htm) defines its `configurationSettings`, and a Configured App stores its `values`.
 
@@ -47,7 +69,7 @@ Using the same StoryMap template, we have configured versions for two cities:
 - [StoryMap: Albany](http://www.arcgis.com/apps/StoryMapBasic/index.html?appid=dd4813fd4ee64b5fa9db764ebd0dda80)
  - [StoryMap Configuration](https://www.arcgis.com/sharing/rest/content/items/dd4813fd4ee64b5fa9db764ebd0dda80/data?f=json)
 
-If you are using Dojo, you can start with the [Map Tools Template](https://github.com/Esri/map-tools-template). This includes [code for loading configurations](https://github.com/Esri/map-tools-template/blob/master/js/template.js).
+Our [Configurable App Examples](https://github.com/Esri/configurable-app-examples-4x-js) leverage a helper called [`ApplicationBase`](https://github.com/Esri/application-base-js) to handle configuration JSON.
 
 ## Identity
 
@@ -67,11 +89,38 @@ for saving views and collaboration
 
 ## Shared Theme
 
-for consistent branding and design
+Hub Ready Apps don't hardcode design elements or require manual configuration to inherit the unique style of the agency that deploys the solution. The information is retrieved on the fly.
 
-### Global Navigation
+![shared theme UI](images/shared_theme.png)
 
-See the [Global Navigation UX](https://esri.invisionapp.com/share/4RE6B00DY#/screens), including the sidebar controsl. Use the [Esri Global Nav](https://github.com/ArcGIS/esri-global-nav) project.
+```json
+{
+  "portalProperties": {
+    "sharedTheme": {
+      "header": {
+        "background": "#002b49",
+        "text": "#ffffff"
+      },
+      "body": {
+        "text": "#1a1a1a",
+        "background": "#ebebeb",
+        "link": "#005ce6"
+      },
+      "button": {
+        "text": "#002673",
+        "background": "#ffffff"
+      },
+      "logo": {
+        "small": "https://cityx.maps.arcgis.com/sharing/rest/content/items/5c9e486b701e4222bf5386da64908ae1/data",
+        "link": "https://cityx.maps.arcgis.com/sharing/rest/content/items/5c9e486b701e4222bf5386da64908ae1/data"
+      }
+    }
+  }
+}
+```
+
+* [Introducing Shared Themes](https://blogs.esri.com/esri/arcgis/2017/02/27/introducing-a-new-app-styling-capability-in-arcgis-online/)
+* [Using Shared Themes in StoryMaps](https://blogs.esri.com/esri/arcgis/2017/03/03/shared-theme-in-story-maps/)
 
 ## Durable State
 
@@ -94,11 +143,29 @@ for Initiative configuration
 
 ## Telemetry
 
-to track usage and performance
+> 'That which is measured, improves' - [Thomas S Monson](https://english.stackexchange.com/questions/14952/that-which-is-measured-improves)
+
+ArcGIS Hub encourages public agencies to track changes in datasets over time to measure the impact of policy changes and community participation in addressing key problems.
+
+A Hub Ready App, in the same light, should attempt to measure its own efficacy by logging information on usage, performance, errors and the successful completion of pre-defined user workflows.
+
+## Responsive
+
+> "The share of Americans that own smartphones is now 77%, up from just 35% ... in 2011." [- Pew Research](http://www.pewinternet.org/fact-sheet/mobile/)
+
+> "Today just over one-in-ten American adults are “smartphone-only” internet users – meaning they own a smartphone, but do not have traditional home broadband service." [- Pew Research](http://www.pewinternet.org/fact-sheet/mobile/)
+
+Building a mobile friendly application should be considered a requirement if your goal is to reach anyone with internet access.
+
+## i18n
+
+Besides making it more likely that your application could be deployed in more than one location, providing translations for languages other than english broadens the reach of your application _within_ a city by including a more diverse collection of stakeholders.
+
+Open source frameworks like Dojo and JQuery have provided tooling to help internationalize applications for many years. These days there are compact framework agnostic options like [Polyglot](https://github.com/airbnb/polyglot.js) as well.
 
 ## Data Citation
 
-link back and attribute data provider
+Its absolutely crucial that you attribute the providers of the data your application consumes.
 
 <img width="692" alt="hub_design__hub_apps__profile" src="https://cloud.githubusercontent.com/assets/1218/24055897/3fcae98c-0b18-11e7-86c3-9cc55f0d0b44.png">
 
@@ -112,7 +179,9 @@ for collaboration and feedback
 
 ## Versioning
 
-for collaborative editing and publishing
+Using [version control](https://en.wikipedia.org/wiki/Version_control) to track changes in your code and tagging releases when you've reached a milestone makes it easier to collaborate with others.
+
+Keeping a [changelog](http://keepachangelog.com/en/1.0.0/) gives transparency into what has changed.
 
 ## Connected Apps
 
@@ -131,11 +200,21 @@ between related Hub apps
 
 <img width="694" alt="hub_design__hub_apps__profile" src="https://cloud.githubusercontent.com/assets/1218/24055883/33cd2e1a-0b18-11e7-8dd5-744c97b7a105.png">
 
-### Contributing
+## Tools
 
-Esri welcomes contributions from anyone and everyone. Please see our [guidelines for contributing](https://github.com/Esri/contributing/blob/master/CONTRIBUTING.md).
+<!-- to do:
+discuss continuum of small building blocks to death star lego sets
+-->
 
-### License
+https://github.com/Esri/arcgis-rest-js
+https://github.com/Esri/arcgis-ember-portal-services
+https://github.com/Esri/configurable-app-examples-4x-js
+
+## License
+
+For Open Data, a license is a [**must**](https://creativecommons.org/licenses/). You should also consider including a `license` if you plan to distibute a Hub Ready App.
+
+For projects Esri shares on GitHub, we usually choose [`Apache-2.0`](https://spdx.org/licenses/Apache-2.0.html).
 
 Copyright 2017 Esri
 
