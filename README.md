@@ -6,24 +6,23 @@
 
 - [What _is_ a **Hub**?](#what-is-a-hub)
 - [What _is_ a **Hub Ready App**?](#what-is-a-hub-ready-app)
-  - [X] [Live Content](#live-content)
+- Required
+  - [X] [Configurable](#configurable)
   - [X] [Indicator Aware](#indicator-aware)
-  - [X] [Identity](#identity)
+  - [X] [ArcGIS Identity](#arcgis-identity)
   - [X] [Shared Theme](#shared-theme)
-  - [X] [Data Citation](#data-citation)
+  - [X] [Accessible](#accessible)
+  - [X] [Mobile Responsive](#mobile-responsive)
+
 - Best Practices
-  - [X] [Durable State](#durable-state)
-  - [X] [Accessibility](#accessibility)
-  - [X] [Responsive](#responsive)
-  - [X] [Telemetry](#telemetry)
-  - [X] [I18n](#i18n)
-  - [X] [Discussions](#disussions)
-  - [X] [Versioning](#versioning)
-  - [X] [License](#license)
-- Aspirational
-  - [ ] [Connected Apps](#connected-apps)*
-  - [ ] [App Switcher](#app-switcher)*
-  - [ ] [Global Profile](#global-profile)*
+  - [ ] [Localized (i18n)](#i18n)
+  - [ ] [Durable State](#durable-state)
+  - [ ] [Data Citation](#data-citation)
+  - [ ] [Telemetry](#telemetry)
+
+- Optional
+  - [ ] [Open License](#license)
+
 - [Tools](#tools)
 
 ## What _is_ a **Hub**?
@@ -42,7 +41,7 @@ Hub-Ready Apps extend the ArcGIS configurable app pattern to share and re-use so
 
 **Note: Your own app doesn't need to implement _each and every_ pattern described in our checklist to be considered *Hub Ready*.**
 
-## Live Content
+## Configurable
 
 <!--
 ~~static data~~
@@ -71,21 +70,9 @@ Using the same StoryMap template, we have configured versions for two cities:
 
 Our [Configurable App Examples](https://github.com/Esri/configurable-app-examples-4x-js) leverage a helper called [`ApplicationBase`](https://github.com/Esri/application-base-js) to handle configuration JSON.
 
-## Identity
+## ArcGIS Identity
 
 for authentication and community
-
-### Global Profile
-
-for saving views and collaboration
-
-<img width="706" alt="hub_design__hub_apps__profile" src="https://cloud.githubusercontent.com/assets/1218/24055918/4ff20156-0b18-11e7-8245-c669ebaf7e26.png">
-
-- Log into any app
-- Save current view to a group
-- Zoom to saved bookmarks
-- Add layers to app
-- Save layers from app to my favorites
 
 ## Shared Theme
 
@@ -157,11 +144,11 @@ A Hub Ready App, in the same light, should attempt to measure its own efficacy b
 
 Building a mobile friendly application should be considered a requirement if your goal is to reach anyone with internet access.
 
-## i18n
+## Localized
 
 Besides making it more likely that your application could be deployed in more than one location, providing translations for languages other than english broadens the reach of your application _within_ a city by including a more diverse collection of stakeholders.
 
-Open source frameworks like Dojo and JQuery have provided tooling to help internationalize applications for many years. These days there are compact framework agnostic options like [Polyglot](https://github.com/airbnb/polyglot.js) as well.
+Open source frameworks like Dojo and JQuery have provided tooling to help create [i18n](https://en.wikipedia.org/wiki/Internationalization_and_localization) applications for many years. These days there are compact framework agnostic options like [Polyglot](https://github.com/airbnb/polyglot.js) as well.
 
 ## Data Citation
 
@@ -172,29 +159,6 @@ Its absolutely crucial that you attribute the providers of the data your applica
 - Link to Open Data
 - Link to Item Page
 - Link to Service
-
-## Discussions
-
-for collaboration and feedback
-
-## Versioning
-
-Using [version control](https://en.wikipedia.org/wiki/Version_control) to track changes in your code and tagging releases when you've reached a milestone makes it easier to collaborate with others.
-
-Keeping a [changelog](http://keepachangelog.com/en/1.0.0/) gives transparency into what has changed.
-
-## Connected Apps
-
-between Hub Initiatives
-
-<img width="699" alt="hub_design__hub_apps__profile" src="https://cloud.githubusercontent.com/assets/1218/24055907/477076e8-0b18-11e7-8111-6ba66edac3be.png">
-
-- Discover related apps for the same theme, area, initiative
-- Selecting related app opens at same 'state' (e.g. at my house)
-
-## App Switcher
-
-between related Hub apps
 
 ## New Experiences
 
@@ -212,11 +176,11 @@ https://github.com/Esri/configurable-app-examples-4x-js
 
 ## License
 
-For Open Data, a license is a [**must**](https://creativecommons.org/licenses/). You should also consider including a `license` if you plan to distibute a Hub Ready App.
+For Open Data, a license is a [**must**](https://creativecommons.org/licenses/). For Hub Ready Apps, an Open License is optional.
 
-For projects Esri shares on GitHub, we usually choose [`Apache-2.0`](https://spdx.org/licenses/Apache-2.0.html).
+For the projects Esri shares on GitHub, we usually choose [`Apache-2.0`](https://spdx.org/licenses/Apache-2.0.html).
 
-Copyright 2017 Esri
+Copyright 2018 Esri
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
