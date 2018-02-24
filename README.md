@@ -15,7 +15,7 @@
   - [X] [Mobile Responsive](#mobile-responsive)
 
 - Best Practices
-  - [ ] [Localized (i18n)](#i18n)
+  - [ ] [Localized (i18n)](#localized)
   - [ ] [Durable State](#durable-state)
   - [ ] [Data Citation](#data-citation)
   - [ ] [Telemetry](#telemetry)
@@ -72,13 +72,27 @@ Our [Configurable App Examples](https://github.com/Esri/configurable-app-example
 
 ## ArcGIS Identity
 
-for authentication and community
+ArcGIS Hub includes ArcGIS Identity, a web-based user authentication and personal content management system. Apps may require authentication (sign in) and authorization (permission) to access sensitive data or services such as spatial analysis. Additionally, users may want to save information that can be reused or shared. 
+
+ArcGIS Identity allows a person to create an account or sign in with social media credentials (e.g. Google and Facebook), an email address, or with enterprise credentials provided through services such as LDAP or Active Directory. Once an account is created, it can be used in any web app, mobile app, website, or other service that requires authentication. This makes it simple for users to maintain one account that can be reused across multiple experiences.
+
+You can learn more about the [benefits of ArcGIS Identity](http://www.esri.com/products/arcgis-capabilities/) or start [implementing ArcGIS Identity](https://developers.arcgis.com/documentation/core-concepts/security-and-authentication/) in your application.
 
 ## Shared Theme
 
-Hub Ready Apps don't hardcode design elements or require manual configuration to inherit the unique style of the agency that deploys the solution. The information is retrieved on the fly.
+Hub Ready Apps should have a consistent theme, or branding, that gives awareness and confidence to users about the source of the app. This theme is typically the branding of the organization such as the government or agency, but can also be the theme for a specific program, interest group or community.
 
 ![shared theme UI](images/shared_theme.png)
+
+
+* [Introducing Shared Themes](https://blogs.esri.com/esri/arcgis/2017/02/27/introducing-a-new-app-styling-capability-in-arcgis-online/)
+* [Using Shared Themes in StoryMaps](https://blogs.esri.com/esri/arcgis/2017/03/03/shared-theme-in-story-maps/)
+
+### Organization Theme
+
+ArcGIS Hub includes a configurable theme for organizations to set their logo, colors, fonts and other brand styling. This theme is then available via the API for automatic use in any app that is configured for the organization. The result is centralized management of the brand theme that is consistent across all apps.
+
+Get `https://www.arcgis.com/sharing/rest/portals/{org.id}?f=json` or `https://{orgkey}.maps.arcgis.com/sharing/rest/portals/self?f=json`
 
 ```json
 {
@@ -106,23 +120,84 @@ Hub Ready Apps don't hardcode design elements or require manual configuration to
 }
 ```
 
-* [Introducing Shared Themes](https://blogs.esri.com/esri/arcgis/2017/02/27/introducing-a-new-app-styling-capability-in-arcgis-online/)
-* [Using Shared Themes in StoryMaps](https://blogs.esri.com/esri/arcgis/2017/03/03/shared-theme-in-story-maps/)
+
+### Site & Initiative Themes
+
+Each Hub site can also have its own theme, which allows for apps to be branded for individual departments or initiatives. 
+
+
+`https://www.arcgis.com/sharing/rest/content/items/{item.id}/data?f=json`
+
+```json
+{
+  "values": {
+    "theme": {
+      "header": {
+        "background": "#012c3b",
+        "text": "#ffffff"
+      },
+      "body": {
+        "background": "#fafafa",
+        "text": "#586370",
+        "link": "#136fbf"
+      },
+      "button": {
+        "background": "#136fbf",
+        "text": "#ffffff"
+      },
+      "logo": {
+        "small": "http://octo.dc.gov/sites/default/files/dc/sites/octo/multimedia_content/images/OpenData-HeaderLogo-WhiteText-2.png"
+      },
+      "flags": {
+        "umbrella": false
+      },
+      "fonts": {
+        "base": {
+          "url": "",
+          "family": "Avenir Next"
+        },
+        "heading": {
+          "url": "",
+          "family": "Avenir Next"
+        }
+      }
+    }
+  }
+}
+```
 
 ## Durable State
 
-Consistent URI parameters across all apps: (using URL of current view)
+When using an Hub Ready App, it's important that the user can easily share the current URL to others or refresh their browser and the app will reload with the current view the user sees. This also applies to mobile apps that can be opened with an app URL. Additionally, it's important to keep the URL to application consistent over time so that users or sites that link to the app continue to work, even with new versions of the app.
 
-- Location
-- Zoom/Center
-- Basemap
+This is commonly referred to as Durable State - meaning that the current app state is maintained in the URL. 
+
+Besides gracefully handling browser refreshing, the a URL can be created the directs new visitors to a specific feature, geographic location, page location, or other state that shows a particular view. 
+
+
+Here are the current list of URL parameters which should be supported:
+
+- _Location_: `?find=<location string>`
+  - example: `?find=380 new york street, redlands, ca`
+- _Zoom/Center_: `?center=<longitude>,<latitude>&level=<zoom>`
+- _Extent_: `?extent=<longitude_west>,<latitude_south>,<longitude_east>,<latitude_north>`
+  - example: `?extent=-117.20,34.055,-117.19,34.06`
+- _Configuration_: `?id=<item.id>`
+  - example: `?id=da80a448ac9246192da0811bddc18c94`
 - Theme/Org
-- Selected features
+- _Selected features_: `?query=<layer name>,<field name>,<field value>` or `?query=<layer name>, <where clause>`
+  - example: `?query=Census_8491,STATE_NAME='California'`
 - Additional Layers
+- Language locale: `?locale=<two-letter country code>`
+  - example: `?locale=es`
 
-## Accessibility
+[Learn more about URL parameters](https://doc.arcgis.com/en/web-appbuilder/manage-apps/app-url-parameters.htm)
 
-for impaired users following WCAG & a11y
+## Accessibile
+
+Hub Ready Apps are inclusive for all users. This includes people who use supportive devices such as screen-readers or keyboard navigation. Standards such as [Web Content Accessibility Guidelines (WCAG)](https://www.w3.org/WAI/intro/wcag) and [Section 508](https://www.section508.gov/) prescribe patterns and practices for ensuring proper accessibility.
+
+Hub Ready Apps should support accessibility guidelines.
 
 ## Indicator Aware
 
@@ -132,11 +207,11 @@ for Initiative configuration
 
 > 'That which is measured, improves' - [Thomas S Monson](https://english.stackexchange.com/questions/14952/that-which-is-measured-improves)
 
-ArcGIS Hub encourages public agencies to track changes in datasets over time to measure the impact of policy changes and community participation in addressing key problems.
+A Hub Ready App should provide the option to measure usage and efficacy for organization in order to measure their impact and improve content usability. By logging information on visits, usage, performance, errors and the successful completion of pre-defined user workflows the organization managers can report on usage and continually improve the app configuration to meet user needs.
 
-A Hub Ready App, in the same light, should attempt to measure its own efficacy by logging information on usage, performance, errors and the successful completion of pre-defined user workflows.
+In the future, ArcGIS Hub will include libraries for integrating app telemetry with the Hub for comparison of app engagement with real-world engagement and outcomes.
 
-## Responsive
+## Mobile Responsive
 
 > "The share of Americans that own smartphones is now 77%, up from just 35% ... in 2011." [- Pew Research](http://www.pewinternet.org/fact-sheet/mobile/)
 
