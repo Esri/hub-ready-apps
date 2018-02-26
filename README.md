@@ -148,9 +148,6 @@ Each Hub site can also have its own theme, which allows for apps to be branded f
       "logo": {
         "small": "http://octo.dc.gov/sites/default/files/dc/sites/octo/multimedia_content/images/OpenData-HeaderLogo-WhiteText-2.png"
       },
-      "flags": {
-        "umbrella": false
-      },
       "fonts": {
         "base": {
           "url": "",
