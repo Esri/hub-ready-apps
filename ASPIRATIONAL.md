@@ -34,6 +34,10 @@ for saving views and collaboration
 
 for collaboration and feedback
 
+## New Experiences
+
+<img width="694" alt="hub_design__hub_apps__profile" src="https://cloud.githubusercontent.com/assets/1218/24055883/33cd2e1a-0b18-11e7-8dd5-744c97b7a105.png">
+
 ## Versioning
 
 Using [version control](https://en.wikipedia.org/wiki/Version_control) to track changes in your code and tagging releases when you've reached a milestone makes it easier to collaborate with others.

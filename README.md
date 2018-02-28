@@ -21,7 +21,7 @@
   - [ ] [Telemetry](#telemetry)
 
 - Optional
-  - [ ] [Open License](#license)
+  - [ ] [Open License](#license)?
 
 - [Tools](#tools)
 
@@ -53,7 +53,7 @@ Hub-Ready Apps extend the ArcGIS configurable app pattern to share and re-use so
 
 using Item config and Group Permissions (with Configurable ArcGIS Content)
 
-Apps should be centrally managed, but then reusable through dynamic configurations that are loaded at runtime. This supports many organizations each maintaining [configured](http://doc.arcgis.com/en/arcgis-online/create-maps/create-app-templates.htm) versions of the app using a single deployment. This minimizes development, deployment, and operational overhead. Read more about the [configurable app specification](http://doc.arcgis.com/en/arcgis-online/create-maps/configurable-templates.htm)
+Apps should be centrally managed, but reusable through dynamic configurations that are loaded at runtime. This supports many organizations each maintaining [configured](http://doc.arcgis.com/en/arcgis-online/create-maps/create-app-templates.htm) versions of the app using a single deployment. This minimizes development, deployment, and operational overhead. Read more about the [configurable app specification](http://doc.arcgis.com/en/arcgis-online/create-maps/configurable-templates.htm)
 
 A [Configurable App Template](http://doc.arcgis.com/en/arcgis-online/create-maps/create-app-templates.htm) defines its `configurationSettings`, and a Configured App stores its `values`.
 
@@ -72,15 +72,15 @@ Our [Configurable App Examples](https://github.com/Esri/configurable-app-example
 
 ## ArcGIS Identity
 
-ArcGIS Hub includes ArcGIS Identity, a web-based user authentication and personal content management system. Apps may require authentication (sign in) and authorization (permission) to access sensitive data or services such as spatial analysis. Additionally, users may want to save information that can be reused or shared. 
+ArcGIS Hub includes ArcGIS Identity, a web-based user authentication and personal content management system. Apps may require authentication (sign in) and authorization (permission) to access sensitive data or services such as spatial analysis. Additionally, users may want to save information that can be reused or shared.
 
 ArcGIS Identity allows a person to create an account or sign in with social media credentials (e.g. Google and Facebook), an email address, or with enterprise credentials provided through services such as LDAP or Active Directory. Once an account is created, it can be used in any web app, mobile app, website, or other service that requires authentication. This makes it simple for users to maintain one account that can be reused across multiple experiences.
 
-You can learn more about the [benefits of ArcGIS Identity](http://www.esri.com/products/arcgis-capabilities/) or start [implementing ArcGIS Identity](https://developers.arcgis.com/documentation/core-concepts/security-and-authentication/) in your application.
+Learn more about the [benefits of ArcGIS Identity](http://www.esri.com/products/arcgis-capabilities/) and start [implementing ArcGIS Identity](https://developers.arcgis.com/documentation/core-concepts/security-and-authentication/) in your application.
 
 ## Shared Theme
 
-Hub Ready Apps should have a consistent theme, or branding, that gives awareness and confidence to users about the source of the app. This theme is typically the branding of the organization such as the government or agency, but can also be the theme for a specific program, interest group or community.
+Hub Ready Apps should have a consistent theme and branding, that gives awareness and confidence to users about the source of the app. This theme is typically the branding of the organization such as the government or agency, but can also be the theme for a specific program, interest group or community.
 
 ![shared theme UI](images/shared_theme.png)
 
@@ -123,7 +123,7 @@ Get `https://www.arcgis.com/sharing/rest/portals/{org.id}?f=json` or `https://{o
 
 ### Site & Initiative Themes
 
-Each Hub site can also have its own theme, which allows for apps to be branded for individual departments or initiatives. 
+Each Hub site can also have its own theme, which allows for apps to be branded for individual departments or initiatives.
 
 
 `https://www.arcgis.com/sharing/rest/content/items/{item.id}/data?f=json`
@@ -167,9 +167,9 @@ Each Hub site can also have its own theme, which allows for apps to be branded f
 
 When using an Hub Ready App, it's important that the user can easily share the current URL to others or refresh their browser and the app will reload with the current view the user sees. This also applies to mobile apps that can be opened with an app URL. Additionally, it's important to keep the URL to application consistent over time so that users or sites that link to the app continue to work, even with new versions of the app.
 
-This is commonly referred to as Durable State - meaning that the current app state is maintained in the URL. 
+This is commonly referred to as Durable State - meaning that the current app state is maintained in the URL.
 
-Besides gracefully handling browser refreshing, the a URL can be created the directs new visitors to a specific feature, geographic location, page location, or other state that shows a particular view. 
+Besides gracefully handling browser refreshing, the a URL can be created the directs new visitors to a specific feature, geographic location, page location, or other state that shows a particular view.
 
 
 Here are the current list of URL parameters which should be supported:
@@ -190,7 +190,7 @@ Here are the current list of URL parameters which should be supported:
 
 [Learn more about URL parameters](https://doc.arcgis.com/en/web-appbuilder/manage-apps/app-url-parameters.htm)
 
-## Accessibile
+## Accessible
 
 Hub Ready Apps are inclusive for all users. This includes people who use supportive devices such as screen-readers or keyboard navigation. Standards such as [Web Content Accessibility Guidelines (WCAG)](https://www.w3.org/WAI/intro/wcag) and [Section 508](https://www.section508.gov/) prescribe patterns and practices for ensuring proper accessibility.
 
@@ -204,7 +204,7 @@ for Initiative configuration
 
 > 'That which is measured, improves' - [Thomas S Monson](https://english.stackexchange.com/questions/14952/that-which-is-measured-improves)
 
-A Hub Ready App should provide the option to measure usage and efficacy for organization in order to measure their impact and improve content usability. By logging information on visits, usage, performance, errors and the successful completion of pre-defined user workflows the organization managers can report on usage and continually improve the app configuration to meet user needs.
+A Hub Ready App should provide the option for an organization to measure its own usage and efficacy to help judge impact and improve content usability. By logging information on visits, usage, performance, errors and the successful completion of pre-defined user workflows organization managers can report on usage and continually improve the app configuration to meet user needs.
 
 In the future, ArcGIS Hub will include libraries for integrating app telemetry with the Hub for comparison of app engagement with real-world engagement and outcomes.
 
@@ -214,17 +214,17 @@ In the future, ArcGIS Hub will include libraries for integrating app telemetry w
 
 > "Today just over one-in-ten American adults are “smartphone-only” internet users – meaning they own a smartphone, but do not have traditional home broadband service." [- Pew Research](http://www.pewinternet.org/fact-sheet/mobile/)
 
-Building a mobile friendly application should be considered a requirement if your goal is to reach anyone with internet access.
+Building a mobile friendly application should be considered a _requirement_ if your goal is to reach anyone with internet access.
 
 ## Localized
 
 Besides making it more likely that your application could be deployed in more than one location, providing translations for languages other than english broadens the reach of your application _within_ a city by including a more diverse collection of stakeholders.
 
-Open source frameworks like Dojo and JQuery have provided tooling to help create [i18n](https://en.wikipedia.org/wiki/Internationalization_and_localization) applications for many years. These days there are compact framework agnostic options like [Polyglot](https://github.com/airbnb/polyglot.js) as well.
+Open source frameworks like Dojo and JQuery have provided tooling to help create [i18n](https://en.wikipedia.org/wiki/Internationalization_and_localization) applications for many years. These days there are compact, framework agnostic options like [Polyglot](https://github.com/airbnb/polyglot.js) as well.
 
 ## Data Citation
 
-Its absolutely crucial that you attribute the providers of the data your application consumes.
+For transparency it is absolutely crucial that you attribute the providers of the data your application consumes to acknowledge the original source.
 
 <img width="692" alt="hub_design__hub_apps__profile" src="https://cloud.githubusercontent.com/assets/1218/24055897/3fcae98c-0b18-11e7-86c3-9cc55f0d0b44.png">
 
@@ -232,19 +232,16 @@ Its absolutely crucial that you attribute the providers of the data your applica
 - Link to Item Page
 - Link to Service
 
-## New Experiences
-
-<img width="694" alt="hub_design__hub_apps__profile" src="https://cloud.githubusercontent.com/assets/1218/24055883/33cd2e1a-0b18-11e7-8dd5-744c97b7a105.png">
-
 ## Tools
 
 <!-- to do:
 discuss continuum of small building blocks to death star lego sets
 -->
 
-https://github.com/Esri/arcgis-rest-js
-https://github.com/Esri/arcgis-ember-portal-services
-https://github.com/Esri/configurable-app-examples-4x-js
+* https://github.com/Esri/arcgis-rest-js
+* https://github.com/Esri/arcgis-ember-portal-services
+* https://github.com/Esri/configurable-app-examples-4x-js
+* https://github.com/Esri/maps-app-javascript
 
 ## License
 
