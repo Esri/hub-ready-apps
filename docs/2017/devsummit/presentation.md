@@ -1,6 +1,6 @@
 <!-- .slide: data-background-size="cover" style="padding-left: 80px" data-background="img/bg-1.png" -->
 
-<h1 style="text-align: left; font-size: 80px;">Building Hub-Ready Apps for Consituent Engagement</h1>
+<h1 style="text-align: left; font-size: 80px;">Building Hub-Ready Apps for Constituent Engagement</h1>
     <p style="text-align: left; font-size: 30px;">@jgravois</p>
     <p style="text-align: left; font-size: 30px;">@tomwayson</p>
 
