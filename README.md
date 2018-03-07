@@ -84,7 +84,6 @@ Hub Ready Apps should have a consistent theme and branding, that gives awareness
 
 ![shared theme UI](images/shared_theme.png)
 
-
 * [Introducing Shared Themes](https://blogs.esri.com/esri/arcgis/2017/02/27/introducing-a-new-app-styling-capability-in-arcgis-online/)
 * [Using Shared Themes in StoryMaps](https://blogs.esri.com/esri/arcgis/2017/03/03/shared-theme-in-story-maps/)
 
@@ -120,11 +119,9 @@ Get `https://www.arcgis.com/sharing/rest/portals/{org.id}?f=json` or `https://{o
 }
 ```
 
-
 ### Site & Initiative Themes
 
 Each Hub site can also have its own theme, which allows for apps to be branded for individual departments or initiatives.
-
 
 `https://www.arcgis.com/sharing/rest/content/items/{item.id}/data?f=json`
 
@@ -194,7 +191,7 @@ Here are the current list of URL parameters which should be supported:
 
 Hub Ready Apps are inclusive for all users. This includes people who use supportive devices such as screen-readers or keyboard navigation. Standards such as [Web Content Accessibility Guidelines (WCAG)](https://www.w3.org/WAI/intro/wcag) and [Section 508](https://www.section508.gov/) prescribe patterns and practices for ensuring proper accessibility.
 
-Hub Ready Apps should support accessibility guidelines.
+Hub Ready Apps should support [accessibility guidelines](./ACCESSIBLE.md).
 
 ## Indicator Aware
 
