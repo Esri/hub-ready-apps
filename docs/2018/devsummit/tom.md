@@ -47,12 +47,17 @@ available in configuration panel?
 
 <!-- .slide: data-background="img/bg-7.png" -->
 
-### Fetch from [Hub site item ](http://tomwayson.maps.arcgis.com/sharing/rest/portals/self?culture=en&f=json)
+### Fetch from [Hub site item ](https://www.arcgis.com/sharing/rest/content/items/f2c15fc3221c4abea5ab70916bd77d6d/data?f=json)
 
-Based on site permission
+- Access based on site permission (public, group, private)
 
 <img src="img/icons8-lock_2.png" class="transparent">
 <img src="img/icons8-unlock_2.png" class="transparent">
+
+Example: [MyStreet](https://github.com/Esri/MyStreet)
+
+Note:
+- `values.theme`
 
 ---
 
@@ -85,7 +90,7 @@ Note:
   <li class="fragment">text alternatives (`alt="logo"`)
   <li class="fragment">semantics and relationships (`<nav>`, `<label for="username">`)
   <li class="fragment">keyboard (`tabindex="2"`, visible focus)
-  <li class="fragment">color (minimum contrast)
+  <li class="fragment">color ([minimum contrast](https://blogs.esri.com/esri/arcgis/2016/09/01/accessibility-guidelines-color-contrast-testing-for-configurable-apps/))
   <li class="fragment">language (`lang="fr"`)
 </ul>
 
@@ -147,7 +152,7 @@ Built into the [ArcGIS API for JavaScript](https://developers.arcgis.com/javascr
 - [grid](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout)
 
 Note:
-- [Move layout from markup to CSS](https://hackernoon.com/how-css-grid-beats-bootstrap-85d5881cf163)
+- CSS grid: https://hackernoon.com/how-css-grid-beats-bootstrap-85d5881cf163
 
 ---
 
@@ -227,3 +232,21 @@ Use something like [esri-loader](https://github.com/Esri/esri-loader)
 <img src="img/all-about-the-map.svg" class="transparent" height="240" />
 
 Use something like [maps-app-javascript](https://github.com/Esri/maps-app-javascript)
+
+---
+
+<!-- .slide: data-background="img/bg-7.png" -->
+
+### [Progressive Web Apps](https://developers.google.com/web/progressive-web-apps/)
+
+<ul>
+  <li class="fragment">Reliable (_some_ offline)
+  <li class="fragment">Fast (service worker to cache content)
+  <li class="fragment">Engaging (install on homescreen)
+</ul>
+
+Note:
+
+Beyond minimizing and deferring bits you download
+
+Example: [Hub Events](https://github.com/tomwayson/hub-events)
