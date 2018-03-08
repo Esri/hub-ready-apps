@@ -1,5 +1,63 @@
 <!-- .slide: data-background="img/bg-7.png" -->
 
+<h2><img src="img/icons8-change_theme.png" class="inline transparent"> Shared Themes</h2>
+
+---
+
+<!-- .slide: data-background="img/bg-7.png" -->
+
+### Communicates source of the app
+
+<a href="https://sharedtheme.maps.arcgis.com/apps/MapAndAppGallery/index.html?appid=c4c6831ded304dd4a2e58d93528e1507"><img src="img/Basic-Viewer-Forest-Service-Theme.png" class="transparent" height="400"></a>
+
+Notes:
+Gives confidence to users
+
+---
+
+<!-- .slide: data-background="img/bg-7.png" -->
+
+### Organization Shared Themes
+
+<a href="https://doc.arcgis.com/en/arcgis-online/administer/configure-general.htm"><img src="img/SharedThemeSettingBlog.png" class="transparent" height="400" /></a>
+
+---
+
+<!-- .slide: data-background="img/bg-7.png" -->
+
+### Fetch from [portals self](http://tomwayson.maps.arcgis.com/sharing/rest/portals/self?culture=en&f=json) API
+
+
+Only available to logged in users
+
+<img src="img/icons8-lock_2.png" class="transparent">
+
+Note:
+available in configuration panel?
+
+---
+
+<!-- .slide: data-background="img/bg-7.png" -->
+
+### Hub Site Shared Themes
+
+<a href="https://doc.arcgis.com/en/hub/sites/design-the-layout-of-your-hub-site.htm"><img src="img/hub-site-admin.png" class="transparent" height="500" /></a>
+
+---
+
+<!-- .slide: data-background="img/bg-7.png" -->
+
+### Fetch from [Hub site item ](http://tomwayson.maps.arcgis.com/sharing/rest/portals/self?culture=en&f=json)
+
+Based on site permission
+
+<img src="img/icons8-lock_2.png" class="transparent">
+<img src="img/icons8-unlock_2.png" class="transparent">
+
+---
+
+<!-- .slide: data-background="img/bg-7.png" -->
+
 <h2><img src="img/icons8-sporty_wheelchair_user.png" class="inline transparent"> Accessible Apps</h2>
 
 ---
@@ -23,11 +81,13 @@ Note:
 <!-- .slide: data-background="img/bg-7.png" -->
 
 ### Hub's [short list](https://github.com/Esri/hub-ready-apps/blob/master/ACCESSIBLE.md)
-- text alternatives (`alt="logo"`)
-- semantics and relationships (`<nav>`, `<label for="username">`)
-- keyboard (`tabindex="2"`, visible focus)
-- color (minimum contrast)
-- language (`lang="fr"`)
+<ul>
+  <li class="fragment">text alternatives (`alt="logo"`)
+  <li class="fragment">semantics and relationships (`<nav>`, `<label for="username">`)
+  <li class="fragment">keyboard (`tabindex="2"`, visible focus)
+  <li class="fragment">color (minimum contrast)
+  <li class="fragment">language (`lang="fr"`)
+</ul>
 
 Note:
 - bypass blocks `<a href="#maincontent">Skip to main content</a>`
