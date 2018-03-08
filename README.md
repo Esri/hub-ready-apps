@@ -70,6 +70,10 @@ Using the same StoryMap template, we have configured versions for two cities:
 
 Our [Configurable App Examples](https://github.com/Esri/configurable-app-examples-4x-js) leverage a helper called [`ApplicationBase`](https://github.com/Esri/application-base-js) to handle configuration JSON.
 
+## Indicator Aware
+
+for Initiative configuration
+
 ## ArcGIS Identity
 
 ArcGIS Hub includes ArcGIS Identity, a web-based user authentication and personal content management system. Apps may require authentication (sign in) and authorization (permission) to access sensitive data or services such as spatial analysis. Additionally, users may want to save information that can be reused or shared.
@@ -82,6 +86,7 @@ Learn more about the [benefits of ArcGIS Identity](http://www.esri.com/products/
 
 Hub Ready Apps should have a consistent theme and branding, that gives awareness and confidence to users about the source of the app. This theme is typically the branding of the organization such as the government or agency, but can also be the theme for a specific program, interest group or community.
 
+![shared theme example](images/lens_theme.png)
 ![shared theme UI](images/shared_theme.png)
 
 * [Introducing Shared Themes](https://blogs.esri.com/esri/arcgis/2017/02/27/introducing-a-new-app-styling-capability-in-arcgis-online/)
@@ -160,6 +165,26 @@ Each Hub site can also have its own theme, which allows for apps to be branded f
 }
 ```
 
+## Accessible
+
+Hub Ready Apps are inclusive for all users. This includes people who use supportive devices such as screen-readers or keyboard navigation. Standards such as [Web Content Accessibility Guidelines (WCAG)](https://www.w3.org/WAI/intro/wcag) and [Section 508](https://www.section508.gov/) prescribe patterns and practices for ensuring proper accessibility.
+
+Hub Ready Apps should support [accessibility guidelines](./ACCESSIBLE.md).
+
+## Mobile Responsive
+
+> "The share of Americans that own smartphones is now 77%, up from just 35% ... in 2011." [- Pew Research](http://www.pewinternet.org/fact-sheet/mobile/)
+
+> "Today just over one-in-ten American adults are “smartphone-only” internet users – meaning they own a smartphone, but do not have traditional home broadband service." [- Pew Research](http://www.pewinternet.org/fact-sheet/mobile/)
+
+Building a mobile friendly application should be considered a _requirement_ if your goal is to reach anyone with internet access.
+
+## Localized
+
+Besides making it more likely that your application could be deployed in more than one location, providing translations for languages other than english broadens the reach of your application _within_ a city by including a more diverse collection of stakeholders.
+
+Open source frameworks like Dojo and JQuery have provided tooling to help create [i18n](https://en.wikipedia.org/wiki/Internationalization_and_localization) applications for many years. These days there are compact, framework agnostic options like [Polyglot](https://github.com/airbnb/polyglot.js) as well.
+
 ## Durable State
 
 When using an Hub Ready App, it's important that the user can easily share the current URL to others or refresh their browser and the app will reload with the current view the user sees. This also applies to mobile apps that can be opened with an app URL. Additionally, it's important to keep the URL to application consistent over time so that users or sites that link to the app continue to work, even with new versions of the app.
@@ -187,38 +212,6 @@ Here are the current list of URL parameters which should be supported:
 
 [Learn more about URL parameters](https://doc.arcgis.com/en/web-appbuilder/manage-apps/app-url-parameters.htm)
 
-## Accessible
-
-Hub Ready Apps are inclusive for all users. This includes people who use supportive devices such as screen-readers or keyboard navigation. Standards such as [Web Content Accessibility Guidelines (WCAG)](https://www.w3.org/WAI/intro/wcag) and [Section 508](https://www.section508.gov/) prescribe patterns and practices for ensuring proper accessibility.
-
-Hub Ready Apps should support [accessibility guidelines](./ACCESSIBLE.md).
-
-## Indicator Aware
-
-for Initiative configuration
-
-## Telemetry
-
-> 'That which is measured, improves' - [Thomas S Monson](https://english.stackexchange.com/questions/14952/that-which-is-measured-improves)
-
-A Hub Ready App should provide the option for an organization to measure its own usage and efficacy to help judge impact and improve content usability. By logging information on visits, usage, performance, errors and the successful completion of pre-defined user workflows organization managers can report on usage and continually improve the app configuration to meet user needs.
-
-In the future, ArcGIS Hub will include libraries for integrating app telemetry with the Hub for comparison of app engagement with real-world engagement and outcomes.
-
-## Mobile Responsive
-
-> "The share of Americans that own smartphones is now 77%, up from just 35% ... in 2011." [- Pew Research](http://www.pewinternet.org/fact-sheet/mobile/)
-
-> "Today just over one-in-ten American adults are “smartphone-only” internet users – meaning they own a smartphone, but do not have traditional home broadband service." [- Pew Research](http://www.pewinternet.org/fact-sheet/mobile/)
-
-Building a mobile friendly application should be considered a _requirement_ if your goal is to reach anyone with internet access.
-
-## Localized
-
-Besides making it more likely that your application could be deployed in more than one location, providing translations for languages other than english broadens the reach of your application _within_ a city by including a more diverse collection of stakeholders.
-
-Open source frameworks like Dojo and JQuery have provided tooling to help create [i18n](https://en.wikipedia.org/wiki/Internationalization_and_localization) applications for many years. These days there are compact, framework agnostic options like [Polyglot](https://github.com/airbnb/polyglot.js) as well.
-
 ## Data Citation
 
 For transparency it is absolutely crucial that you attribute the providers of the data your application consumes to acknowledge the original source.
@@ -228,6 +221,14 @@ For transparency it is absolutely crucial that you attribute the providers of th
 - Link to Open Data
 - Link to Item Page
 - Link to Service
+
+## Telemetry
+
+> 'That which is measured, improves' - [Thomas S Monson](https://english.stackexchange.com/questions/14952/that-which-is-measured-improves)
+
+A Hub Ready App should provide the option for an organization to measure its own usage and efficacy to help judge impact and improve content usability. By logging information on visits, usage, performance, errors and the successful completion of pre-defined user workflows organization managers can report on usage and continually improve the app configuration to meet user needs.
+
+In the future, ArcGIS Hub will include libraries for integrating app telemetry with the Hub for comparison of app engagement with real-world engagement and outcomes.
 
 ## Tools
 
