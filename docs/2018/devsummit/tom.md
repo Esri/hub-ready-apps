@@ -33,7 +33,8 @@ Only available to logged in users
 <img src="img/icons8-lock_2.png" class="transparent">
 
 Note:
-available in configuration panel?
+may be available in configuration panel
+if not need to create a self-configurable app
 
 ---
 
@@ -43,12 +44,16 @@ available in configuration panel?
 
 <a href="https://doc.arcgis.com/en/hub/sites/design-the-layout-of-your-hub-site.htm"><img src="img/hub-site-admin.png" class="transparent" height="500" /></a>
 
+Note:
+created at runtime
+
 ---
 
 <!-- .slide: data-background="img/bg-7.png" -->
 
-### Fetch from [Hub site item ](https://www.arcgis.com/sharing/rest/content/items/f2c15fc3221c4abea5ab70916bd77d6d/data?f=json)
+### Fetch from [Hub site item ](https://www.arcgis.com/sharing/rest/content/items/ce0da32bc96047c882585609c63d537d/resources/theme.json)
 
+- A resource on the site item
 - Access based on site permission (public, group, private)
 
 <img src="img/icons8-lock_2.png" class="transparent">
@@ -57,7 +62,6 @@ available in configuration panel?
 Example: [MyStreet](https://github.com/Esri/MyStreet)
 
 Note:
-- `values.theme`
 
 ---
 
