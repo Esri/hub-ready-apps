@@ -42,3 +42,20 @@
     }
   ]
 }
+
+{
+  "collisionLayer": {
+    "url": "https://server.com/foo/bar/23",
+    "title": "2008 Collisions",
+    "fields": {
+      "numInjuries": {
+        "name": "MAJORINJURIES",
+        "alias": "Major Injuries to Pedestrians"
+      },
+      "numFatalities": {
+        "name": "FATALITIES",
+        "alias": "Pedestrian Fatalities"
+      }
+    }
+  }
+}

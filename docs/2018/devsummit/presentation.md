@@ -2,7 +2,7 @@
 
 <h1 style="text-align: left; font-size: 80px;">Building Hub-Ready Apps for Constituent Engagement</h1>
     <p style="text-align: left; font-size: 1.5em;">@jgravois / @tomwayson</p>
-    <p style="text-align: left; font-size: 1.5em;">slides: http://bit.ly/2D8zEDJ
+    <p style="text-align: left; font-size: 1.5em;">slides: http://bit.ly/2I7qOd3
 </p>
 
 ---
@@ -19,29 +19,48 @@ first lets take a look at what it looks like to folks that share them
 
 <!-- .slide: data-background="img/bg-2.png" -->
 
-## Demo - Economic Development
+### Demo - Economic Development
 
 ---
 
 <!-- .slide: data-background="img/bg-2.png" -->
 
 is there a checklist?
-<div class="fragment">
-  <p>yes! there is!</p>
-  <p>https://github.com/Esri/hub-ready-apps</p>
-</d>
+<p class="fragment">https://github.com/Esri/hub-ready-apps</p>
 
 ---
 
+<!-- .slide: data-background="img/bg-3.png" -->
+
+### configurable / indicator aware
+
+---
 
 <!-- .slide: data-background="img/bg-3.png" -->
 
-### _Topic #2_
+### Demo: [Collision Lens](https://github.com/Esri/summary-viewer-template/)
 
-content
+---
 
-<aside class="notes">
+<!-- .slide: data-background="img/bg-3.png" -->
 
-these are my notes!
+### [adlib](https://github.com/Esri/adlib) to the rescue
 
-</aside>
+---
+
+<!-- .slide: data-background="img/bg-3.png" -->
+
+### [Configurable App Spec](https://github.com/Esri/configurable-app-examples-4x-js)
+
+---
+
+<!-- .slide: data-background="img/bg-3.png" -->
+
+### [ArcGIS Identity](https://developers.arcgis.com/documentation/core-concepts/security-and-authentication/)
+use OAuth2!
+
+---
+
+<!-- .slide: data-background="img/bg-3.png" -->
+
+### [Demo](https://github.com/Esri/configurable-app-examples-4x-js/tree/master/hub-auth-js)
