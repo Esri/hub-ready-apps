@@ -2,7 +2,7 @@
 
 <h1 style="text-align: left; font-size: 80px;">Building Hub-Ready Apps for Constituent Engagement</h1>
     <p style="text-align: left; font-size: 1em;">@jgravois / @MarkhamShofner</p>
-    <p style="text-align: left; font-size: 1em;">slides: `http://bit.ly/2I7qOd3`
+    <p style="text-align: left; font-size: 1em;">slides: `http://bit.ly/2GdsHa5`
 </p>
 
 ---

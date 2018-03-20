@@ -89,7 +89,7 @@ idea, question, issue, or success story?
 
 [@geogangster](https://twitter.com/geogangster) / [@MarkhamShoftner](https://twitter.com/MarkhamShoftner)
 
-Slides: [`http://bit.ly/2I7qOd3`](http://bit.ly/2I7qOd3)
+slides: `http://bit.ly/2GdsHa5`
 
 ---
 
