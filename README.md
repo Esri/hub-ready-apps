@@ -92,6 +92,8 @@ Hub Ready Apps should have a consistent theme and branding, that gives awareness
 * [Introducing Shared Themes](https://blogs.esri.com/esri/arcgis/2017/02/27/introducing-a-new-app-styling-capability-in-arcgis-online/)
 * [Using Shared Themes in StoryMaps](https://blogs.esri.com/esri/arcgis/2017/03/03/shared-theme-in-story-maps/)
 
+In this vein, Esri has also open sourced our HTML/CSS framework [Calcite Web](http://esri.github.io/calcite-web/) to make it easy to build responsive websites that look and feel like part of the family.
+
 ### Organization Theme
 
 ArcGIS Hub includes a configurable theme for organizations to set their logo, colors, fonts and other brand styling. This theme is then available via the API for automatic use in any app that is configured for the organization. The result is centralized management of the brand theme that is consistent across all apps.

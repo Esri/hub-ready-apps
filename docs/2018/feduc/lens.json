@@ -1,0 +1,61 @@
+{
+  "operationalLayers": [
+    {
+      "id": "collisionLayer",
+      "layerType": "ArcGISFeatureLayer",
+      "url": "{{collisionLayer.url}}",
+      "visibility": true,
+      "opacity": 1,
+      "title": "Collisions Data Indicator for Development",
+      "popupInfo": {
+        "title": "Crashes",
+        "description": "Injuries: {{{collisionLayer.fields.numInjuries.name}}}<br />Fatalities: {{{collisionLayer.fields.numFatalities.name}}}",
+        "showAttachments": true,
+        "fieldInfos": [
+          {
+            "fieldName": "{{collisionLayer.fields.numInjuries.name}}",
+            "label": "Injuries",
+            "isEditable": true,
+            "tooltip": "",
+            "visible": true,
+            "format": {
+              "places": 0,
+              "digitSeparator": true
+            },
+            "stringFieldOption": "textbox"
+          },
+          {
+            "fieldName": "{{collisionLayer.fields.numFatalities.name}}",
+            "label": "Fatalities",
+            "isEditable": true,
+            "tooltip": "",
+            "visible": true,
+            "format": {
+              "places": 0,
+              "digitSeparator": true
+            },
+            "stringFieldOption": "textbox"
+          }
+        ],
+        "mediaInfos": []
+      }
+    }
+  ]
+}
+
+{
+  "collisionLayer": {
+    "url": "https://server.com/foo/bar/23",
+    "title": "2008 Collisions",
+    "fields": {
+      "numInjuries": {
+        "name": "MAJORINJURIES",
+        "alias": "Major Injuries to Pedestrians"
+      },
+      "numFatalities": {
+        "name": "FATALITIES",
+        "alias": "Pedestrian Fatalities"
+      }
+    }
+  }
+}
