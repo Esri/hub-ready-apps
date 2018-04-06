@@ -29,7 +29,7 @@
 
 [ArcGIS Hub](http://hub.arcgis.com/) provides a two-way engagement platform to connect government and citizens.
 
-[![video introducing hub](https://www.gislounge.com/wp-content/uploads/2017/06/arcgis-hub.png)](https://esri.app.box.com/s/edd8di8sy5r8wxyrcnl2v4mh3n5bwjpj)
+[![video introducing hub](https://www.gislounge.com/wp-content/uploads/2017/06/arcgis-hub.png)](https://www.youtube.com/watch?v=EXbsdGUDEPE)
 
 > An interactive platform to organize people, processes, and technology. ArcGIS Hub comes with built-in event creation and allows you to gather feedback from inside and outside your organization to find or create new solutions to existing problems.
 
