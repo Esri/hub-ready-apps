@@ -87,7 +87,7 @@ please, _please_, **please** fill out a session survey
 
 idea, question, issue, or success story?
 
-[@geogangster](https://twitter.com/geogangster) / [@MarkhamShoftner](https://twitter.com/MarkhamShoftner)
+[@geogangster](https://twitter.com/geogangster) / [@MarkhamShoftner](https://twitter.com/MarkhamShofner)
 
 slides: `http://bit.ly/2GdsHa5`
 

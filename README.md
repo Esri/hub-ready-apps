@@ -80,7 +80,7 @@ ArcGIS Hub includes ArcGIS Identity, a web-based user authentication and persona
 
 ArcGIS Identity allows a person to create an account or sign in with social media credentials (e.g. Google and Facebook), an email address, or with enterprise credentials provided through services such as LDAP or Active Directory. Once an account is created, it can be used in any web app, mobile app, website, or other service that requires authentication. This makes it simple for users to maintain one account that can be reused across multiple experiences.
 
-Learn more about the [benefits of ArcGIS Identity](http://www.esri.com/products/arcgis-capabilities/) and start [implementing ArcGIS Identity](https://developers.arcgis.com/documentation/core-concepts/security-and-authentication/) in your application.
+> [Learn more](./IDENTITY.md)
 
 ## Shared Theme
 
