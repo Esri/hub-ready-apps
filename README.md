@@ -239,7 +239,7 @@ discuss continuum of small building blocks to death star lego sets
 -->
 
 * https://github.com/Esri/arcgis-rest-js
-* https://github.com/Esri/arcgis-ember-portal-services
+* https://github.com/Esri/ember-arcgis-portal-services
 * https://github.com/Esri/configurable-app-examples-4x-js
 * https://github.com/Esri/maps-app-javascript
 
