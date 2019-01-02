@@ -35,6 +35,8 @@
 
 ## What _is_ a **Hub Ready** App?
 
+> check out the talk from [Dev Summit 2018](https://www.youtube.com/watch?v=Z12NgfRyrN4)! :point_left:
+
 Hub-Ready Apps integrate with the Hub administrative and community user experience and provide simple workflows to inform, listen and monitor important initiatives.
 
 Hub-Ready Apps extend the ArcGIS configurable app pattern to share and re-use solutions that integrate directly with the Hub architecture and organization datasets and branding.
